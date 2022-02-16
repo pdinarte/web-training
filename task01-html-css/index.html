@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task #1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      img {
+        position: relative;
+        z-index: -1;
+        
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+      .container {
+        position: relative;
+        
+        float: left; 
+        width: 220px;
+        height: 280px;
+        overflow: hidden;
+        margin-left: 20px;
+        
+        border-radius: 20px;
+        background-image: linear-gradient(rgba(255,255,255,0), rgb(0,0,0));
+        background-size: 100% 40%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+      }
+      .names {
+        position: absolute;
+        
+        bottom: 30px;
+        width: 100%;
+        
+        text-align: center;
+        font-family: 'Roboto Slab';
+        font-weight: bold;
+        font-size: 22px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/characters1.png" alt="Monkey D. Luffy">
+      <div class="names">Monkey D. Luffy</div>
+    </div>
+    <div class="container">
+      <img src="images/characters2.png" alt="Portgas D. Ace">
+      <div class="names">Portgas D. Ace</div>
+    </div>
+    <div class="container">
+      <img src="images/characters3.png" alt="Roronoa Zoro">
+      <div class="names">Roronoa Zoro</div>
+    </div>
+    <div class="container">
+      <img src="images/characters4.png" alt="Nico Robin">
+      <div class="names">Nico Robin</div>
+    </div>
+  </body>
+</html>
