@@ -8,6 +8,8 @@ img {
 }
 
 .characters-container {
+  margin-left: 170px;
+  margin-right: 170px;
   display: flex;
   justify-content: center;
 }
