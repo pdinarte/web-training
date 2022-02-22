@@ -11,6 +11,10 @@ img {
   object-fit: cover;
 }
 
+h1 {
+  margin-bottom: auto;
+}
+
 .characters-container {
   margin-left: 170px;
   margin-right: 170px;
