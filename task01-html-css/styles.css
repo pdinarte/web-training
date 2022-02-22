@@ -20,16 +20,17 @@ h1 {
   margin-right: 170px;
   display: flex;
   justify-content: center;
+  column-gap: 20px;
+  row-gap: 20px;
+  flex-wrap: wrap;
 }
 
 .container {
   position: relative;
   
-  float: left; 
   width: 220px;
   height: 280px;
   overflow: hidden;
-  margin-left: 20px;
   
   border-radius: 20px;
   background-image: linear-gradient(rgba(255,255,255,0), rgb(0,0,0));
