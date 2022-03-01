@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* PADDING */
+$tiny-padding: 8px;
+$small-padding: 16px; //main 
+$medium-padding: 19px;  //header 
+$big-padding: 48px;
+$margin-bottom-main: 70px;
+/* COLORS */
+$background-color: white;
+$primary-dark-1: #0C75AF;
+$grey-1: #7D7D7D;
+$grey-2: #B5B5B5;
+/* BORDER */
+$tiny-border-radius: 6px;
+$small-border-radius: 8px;
+$medium-border-radius: 16px;
+/* COMPONENT SIZING */
+$nav-height: 78px;
+$search-bar-height: 56px;
+$main-img-height: 260px;
+$character-card-height: 230px;
+$character-card-width: 180px;
+$island-card-size: 195px;
+$island__info-box-size: 48px;
+$mist-card-height: 132px;

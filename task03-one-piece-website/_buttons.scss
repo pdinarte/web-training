@@ -1,0 +1,9 @@
+/* BUTTON STYLING */
+.text-btn {
+  display: flex;
+  height: fit-content;
+  border: none;
+  background-color: $background-color;
+  color: $primary-dark-1;
+  column-gap: $small-padding;
+}

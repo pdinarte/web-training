@@ -1,0 +1,66 @@
+/* TEXT STYLING */
+  //headings
+  h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: $small-padding;
+    width: 100%;
+  }
+  h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  h3 {
+    margin-bottom: auto;
+    position: absolute;
+    bottom: 30px;
+  
+    width: 100%;
+  
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+  }
+    //body
+  .p-large {
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    letter-spacing: 0.15000000596046448px;
+  }
+  .p-medium {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+  }
+  .p-small {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+  }
+    //labels
+  .l3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height, or 123% */
+  
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 0.5px;
+  }
