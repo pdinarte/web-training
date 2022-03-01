@@ -215,17 +215,11 @@ footer {
   color: white;
   text-align: center;
 }
-.footer__img-container {
+.footer__img {
   width: 90px;
   height: 90px;
   margin-bottom: 38px;
   
   overflow: hidden;
-}
-.footer__img--size {
-  position: relative;
-  width: 130%;
-  height: 130%;
-  top: -12px;
-  left: -15px;
+  object-fit: cover;
 }
