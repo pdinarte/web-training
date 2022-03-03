@@ -1,5 +1,7 @@
 const readMoreBtn = document.querySelector('.read-more-btn');
 const text = document.querySelector('.show-text');
+const menuBtn = document.querySelector('.menu-btn')
+const dropdown = document.querySelector('.dropdown');
 
 readMoreBtn.addEventListener('click', (e)=>{
   text.classList.toggle('visible');
@@ -12,4 +14,8 @@ readMoreBtn.addEventListener('click', (e)=>{
      readMoreBtn.innerHTML = readMoreBtn.innerHTML.replace('Read Less', 'Read All');
      readMoreBtn.innerHTML = readMoreBtn.innerHTML.replace('fa-chevron-up', 'fa-chevron-down');
    }
-})
+});
+
+menuBtn.addEventListener('click', (e)=> {
+  dropdown.classList.toggle('visible');
+});

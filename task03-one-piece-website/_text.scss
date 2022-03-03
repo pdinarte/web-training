@@ -1,6 +1,7 @@
 /* TEXT STYLING */
   //headings
   h1 {
+    font-family: Roboto Slab;
     font-style: normal;
     font-weight: bold;
     font-size: 22px;
@@ -9,10 +10,12 @@
     width: 100%;
   }
   h2 {
+    font-family: Roboto Slab;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
+    letter-spacing: 0.1px;
   }
   h3 {
     margin-bottom: auto;
