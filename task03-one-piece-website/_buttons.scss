@@ -1,9 +1,15 @@
 /* BUTTON STYLING */
 .text-btn {
-  display: flex;
   height: fit-content;
   border: none;
   background-color: $background-color;
   color: $primary-dark-1;
+}
+.menu-btn {
+  border: none;
+  background-color: aqua;
+}
+.read-more-btn {
+  display: flex;
   column-gap: $small-padding;
 }

@@ -64,3 +64,12 @@
     align-items: flex-end;
     letter-spacing: 0.5px;
   }
+
+    //dynamic text
+  .more-text {
+    display: none;
+  }
+  .show-text.visible .more-text{
+    display: inline;
+  }
+  
