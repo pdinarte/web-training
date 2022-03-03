@@ -129,6 +129,8 @@ main {
   display: flex;
   margin-top: $big-padding;
   margin-bottom: 32px;
+  margin-left: $small-padding;
+  margin-right: $small-padding;
   justify-content: space-between;
   align-items: center;
 }
@@ -140,6 +142,7 @@ section {
   overflow: auto;
   column-gap: 20px;
   row-gap: 20px;
+  padding: 0 $small-padding;
 
   &__img {
     position: relative;
@@ -204,7 +207,7 @@ section {
   }
 }
 .mist-grid {
-  width: 100%;
+  padding: 0 $small-padding;
   overflow: hidden;
   display: flex;
   flex-direction: column;
