@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <nav>
+    <nav class="side-margin">
       <button class="fa-solid fa-bars menu-btn"></button>
       <img class="nav__logo" src="images/logo.png" alt="">
     </nav>
@@ -35,7 +35,7 @@
         <img class="main__img" src="images/everyone.png" alt="">
       </div>
       <!-- sinopsis-box -->
-      <section class="main__sinopsis-box">
+      <section class="main__sinopsis-box side-margin">
         <h1>Sinopsis</h1>
         <p class="p-medium show-text">
           Dawn Island is an island located in the East Blue and where the Goa Kingdom is situated.
@@ -55,18 +55,16 @@
         <script src="./main.js"></script>
       </section>
       <!-- search-bar -->
-      <section class="main__search-bar">
+      <section class="main__search-bar side-margin">
         <i class="fa-solid fa-magnifying-glass"></i>
         <p class="p-medium">Search Characters, Islands or Objects</p>
       </section>
       <!-- characters -->
-      <section>
-        <div class="main__section-header">
-          <h2>Characters</h2>
-          <button class="text-btn"><p class="p-medium">See all</p></button>
-        </div>
-      </section>
-      <div class="card-grid">
+      <div class="main__section-header side-margin">
+        <h2>Characters</h2>
+        <button class="text-btn"><p class="p-medium">See all</p></button>
+      </div>
+      <div class="card-grid side-padding">
         <div class="character-card">
           <img class="card-grid__img img--offset-center" src="images/characters1.png" alt="Monkey D. Luffy">
           <h1 class="character-card__name">Monkey D. Luffy</h1>
@@ -85,13 +83,11 @@
         </div>
       </div>
       <!-- islands -->
-      <section>
-        <div class="main__section-header">
-          <h2>Islands</h2>
-          <button class="text-btn"><p class="p-medium">See all</p></button>
-        </div>
-      </section>
-      <div class="card-grid">
+      <div class="main__section-header side-margin">
+        <h2>Islands</h2>
+        <button class="text-btn"><p class="p-medium">See all</p></button>
+      </div>
+      <div class="card-grid side-padding">
         <div class="island-card">
           <img class="card-grid__img" src="images/island1.png" alt="Dawn island">
           <div class="island-card__infobox">
@@ -115,12 +111,10 @@
         </div>
       </div>
       <!-- mist objects -->
-      <section>
-        <div class="main__section-header">
-          <h2>Mist objects</h2>
-          <button class="text-btn"><p class="p-medium">See all</p></button>
-        </div>
-      </section>
+      <div class="main__section-header side-margin">
+        <h2>Mist objects</h2>
+        <button class="text-btn"><p class="p-medium">See all</p></button>
+      </div>
       <div class="mist-grid">
         <div class="mist-grid__card">
           <img src="images/mist1.png" class="mist-grid__card-image">
@@ -147,7 +141,7 @@
     </main>
 
     <footer>
-      <img class="footer__img" src="images/isotype.png" alt="">
+      <img src="images/isotype.png" alt="">
       <p class="p-small">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit at vel congue scelerisque tortor tortor.
       </p>

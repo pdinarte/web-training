@@ -37,3 +37,29 @@ hr {
 .color--grey {
   background-color: $grey-4;
 }
+.side-margin {
+  margin-left: $small-padding;
+  margin-right: $small-padding;
+
+  @include responsive(tablet) {
+    margin-left: $small-padding-t;
+    margin-right: $small-padding-t;
+  }
+  @include responsive(desktop) {
+    margin-left: $small-padding-d;
+    margin-right: $small-padding-d;
+  }
+}
+.side-padding {
+  padding-left: $small-padding;
+  padding-right: $small-padding;
+
+  @include responsive(tablet) {
+    padding-left: $small-padding-t;
+    padding-right: $small-padding-t;
+  }
+  @include responsive(desktop) {
+    padding-left: $small-padding-d;
+    padding-right: $small-padding-d;
+  }
+}

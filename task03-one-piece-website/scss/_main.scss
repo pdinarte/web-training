@@ -4,17 +4,6 @@ main {
   flex-direction: column;
   justify-items: center;
   margin-bottom: $margin-bottom-main;
-  section {
-    margin: 0 $small-padding;
-
-    @include responsive(tablet) {
-      margin: 0 $small-padding-t
-    }
-
-    @include responsive(desktop) {
-      margin: 0 $small-padding-d
-    }
-  }
 }
 .main__img-container {
   height: $main-img-height;
