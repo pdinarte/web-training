@@ -16,18 +16,30 @@
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.1px;
+
+    @include responsive(desktop) {
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
   h3 {
-    margin-bottom: auto;
-    position: absolute;
-    bottom: 30px;
-  
-    width: 100%;
-  
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+
+    @include responsive(tablet) {
+      font-family: Roboto Slab;
+      font-style: bold;
+      font-size: 16px;
+    }
+
+    @include responsive(desktop) {
+      font-size: 22px;
+      line-height: 28px; 
+    }
   }
     //body
   .p-large {

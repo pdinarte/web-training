@@ -1,9 +1,21 @@
 .card-grid {
   display: flex;
   overflow: auto;
-  column-gap: 20px;
-  row-gap: 20px;
-  padding: 0 $small-padding;
+  gap: 20px;
+  padding-left: $small-padding;
+  padding-right: $small-padding;
+
+  @include responsive(tablet) {
+    padding-left: $small-padding-t;
+    padding-right: $small-padding-t;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+
+  @include responsive(desktop) {
+    padding-left: $small-padding-d;
+    padding-right: $small-padding-d;
+  }
 
   &__img {
     position: relative;
@@ -28,17 +40,27 @@
   &__name {
     position: absolute;
     width: 100%;
-    top: 175px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
+    top: 78%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    letter-spacing: -0.02em;
     color: #FFFFFF;
   }
+
+  @include responsive(tablet) {
+    flex-grow: 1;
+    min-width: auto;
+    height: $character-card-height-t;
+    min-height: $character-card-height-t;
+    border-radius: 13.0265px;
+  }
+
+  @include responsive(desktop) {
+    height: $character-card-height-d;
+    min-height: $character-card-height-d;
+    border-radius: 20.5295px;
+  }
+  
 
 }
 .island-card {

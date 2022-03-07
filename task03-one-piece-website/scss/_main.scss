@@ -13,6 +13,10 @@ main {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100% 60%;
+
+  @include responsive(tablet) {
+    height: $main-img-height-t;
+  }
 }
 .main__img {
   position: relative;
@@ -37,6 +41,8 @@ main {
 }
 .main__search-bar {
   display: flex;
+  flex-basis: content;
+  align-items: center;
   column-gap: 25px;
   color: $grey-1;
   border: 1px solid $grey-2;
