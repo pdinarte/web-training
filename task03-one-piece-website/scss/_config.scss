@@ -4,11 +4,18 @@
 }
 
 /* PADDING */
+  //phone
 $tiny-padding: 8px;
 $small-padding: 16px; //main 
 $medium-padding: 19px;  //header 
 $big-padding: 48px;
 $margin-bottom-main: 70px;
+  //tablet
+$small-padding-t: 64px;
+
+//desktop
+$small-padding-d: 170px;
+
 /* COLORS */
 $background-color: white;
 $primary-dark-1: #0C75AF;
@@ -30,3 +37,5 @@ $character-card-width: 180px;
 $island-card-size: 195px;
 $island__info-box-size: 48px;
 $mist-card-height: 132px;
+
+
