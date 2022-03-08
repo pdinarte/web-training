@@ -16,6 +16,7 @@ main {
 
   @include responsive(tablet) {
     height: $main-img-height-t;
+    background-image: none;
   }
 }
 .main__img {
@@ -38,6 +39,10 @@ main {
   margin-top: $medium-padding;
   margin-bottom: $big-padding;
   overflow: hidden;
+
+  @include responsive(tablet) {
+    margin-top: -50px;
+  }
 }
 .main__search-bar {
   display: flex;

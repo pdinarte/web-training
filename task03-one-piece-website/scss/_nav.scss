@@ -41,10 +41,12 @@ nav {
     opacity: 0;
     transform: scaleY(0);
     transform: translateY(-20px);
-    transition: opacity 200ms ease-in-out, transform 300ms ease-in-out;
+    
   
     &.visible {
+      transition: opacity 200ms ease-in-out, transform 300ms ease-in-out;
       transform: scaleY(1);
+
       opacity: 1;
       transform: translateY(0);
     }
@@ -95,6 +97,7 @@ nav {
       margin-left: 69px;
       opacity: 1;
       transform: none;
+      transition: none;
       box-shadow: none;
 
       a{

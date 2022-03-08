@@ -16,4 +16,5 @@ readMoreBtn.addEventListener('click', (e)=>{
 
 menuBtn.addEventListener('click', (e)=> {
   dropdown.classList.toggle('visible');
+  menuBtn.classList.toggle('fa-xmark');
 });
