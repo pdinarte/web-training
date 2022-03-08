@@ -10,11 +10,24 @@
   column-gap: $small-padding;
 }
 .language-btn {
+  width: 169px;
+  height: 30.79px;
+
   border: none;
   background-color: $background-color;
+
   display: flex;
-  column-gap: $tiny-padding;
-  padding: 5px 30px;
   align-items: center;
+  justify-content: center;
+  column-gap: $tiny-padding;
+
   color: $grey-0;
+
+  @include responsive (desktop) {
+    width: 90px;
+
+    h2 {
+      display: none;
+    }
+  }
 }
