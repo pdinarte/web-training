@@ -1,4 +1,7 @@
 /* BUTTON STYLING */
+button {
+  &:hover { cursor:pointer; }
+}
 .text-btn {
   height: fit-content;
   border: none;
