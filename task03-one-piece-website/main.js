@@ -1,6 +1,6 @@
 const readMoreBtn = document.querySelector('.read-more-btn');
 const text = document.querySelector('.show-text');
-const menuBtn = document.querySelector('.menu-btn')
+const menuBtn = document.querySelector('.nav__menu')
 const dropdown = document.querySelector('.dropdown');
 
 readMoreBtn.addEventListener('click', (e)=>{

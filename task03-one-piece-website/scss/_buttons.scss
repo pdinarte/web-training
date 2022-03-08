@@ -5,21 +5,9 @@
   background-color: $background-color;
   color: $primary-dark-1;
 }
-.menu-btn {
-  border: none;
-  background-color: $background-color;
-  color: $black;
-  transition-duration: 0.4s;
-}
 .read-more-btn {
   display: flex;
   column-gap: $small-padding;
-}
-.menu-option {
-  text-decoration: none;
-  color: $grey-0;
-  text-align: center;
-  margin-bottom: 60px;
 }
 .language-btn {
   border: none;

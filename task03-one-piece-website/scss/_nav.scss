@@ -5,14 +5,42 @@ nav {
   height: $nav-height;
   grid: [row1-start] "menu logo ." 1fr [row1-end] / 1fr 4fr 1fr;
   align-items: center;
+
+  .nav__menu {
+    border: none;
+    background-color: $background-color;
+    color: $black;
+    transition-duration: 0.4s;
+  }
+  .nav__logo {
+    width: 112px;
+    height: 40px;
+    object-fit: cover;
+    justify-self: center;
+    grid-area: logo;
+  }
+
+  @include responsive(tablet) {
+    height: $nav-height-t;
+
+    .nav__logo {
+      width: 163px;
+      height: 58px;
+    }
+  }
+  @include responsive(desktop) {
+    display: flex;
+    justify-content: space-between;
+    height: $nav-height-d;
+
+    .nav__menu {
+      display: none;
+    }
+  }
+
+
 }
-.nav__logo {
-  width: 112px;
-  height: 40px;
-  object-fit: cover;
-  justify-self: center;
-  grid-area: logo;
-}
+
 .dropdown {
   opacity: 0;
   transform: translateY(-10px);
@@ -42,5 +70,15 @@ nav {
       column-gap: 20px;
       margin-bottom: 34px;
     }
+  }
+}
+.menu-option {
+  text-decoration: none;
+  color: $grey-0;
+  text-align: center;
+  margin-bottom: 60px;
+
+  &:hover {
+    color: $primary-dark-1;
   }
 }
