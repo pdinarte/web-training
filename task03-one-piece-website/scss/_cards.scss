@@ -2,19 +2,10 @@
   display: flex;
   overflow: auto;
   gap: 20px;
-  padding-left: $small-padding;
-  padding-right: $small-padding;
 
   @include responsive(tablet) {
-    padding-left: $small-padding-t;
-    padding-right: $small-padding-t;
     justify-content: stretch;
     align-items: stretch;
-  }
-
-  @include responsive(desktop) {
-    padding-left: $small-padding-d;
-    padding-right: $small-padding-d;
   }
 
   &__img {
@@ -60,43 +51,55 @@
     min-height: $character-card-height-d;
     border-radius: 20.5295px;
   }
-  
-
 }
 .island-card {
   position: relative;
+  display: flex;
+  flex-grow: 1;
   width: $island-card-size;
   height: $island-card-size;
   min-width: $island-card-size;
   min-height: $island-card-size;
   border-radius: $small-border-radius;
-  overflow: hidden;
-
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  overflow: hidden;
 
   &__infobox {
     position: absolute;
-    width: $island-card-size - 3*$small-padding;
-    height: $island__info-box-size - $small-padding;
-    left: 8px;
-    top: 137px;
-  
+    display: flex;
+    flex-direction: column;
+    //box-sizing: border-box;
+    padding: $tiny-padding $small-padding;
+    margin: $tiny-padding;
+    align-self: flex-end;
+    
     background: rgba(0, 96, 150, 0.59);
     backdrop-filter: blur(4px);
-    border-radius: $tiny-border-radius;
-  
-    padding: $tiny-padding $small-padding;
-  
+    
+    border-radius: 6px;
+
     color: white;
+  }
+
+  @include responsive(tablet) {
+    min-width: auto;
+    height: $island-card-size-t;
+    min-height: $island-card-size-t;
+    border-radius: 8.2487px;
+  }
+
+  @include responsive(desktop) {
+    height: $island-card-size-d;
+    min-height: $island-card-size-d;
+    border-radius: 12.3731px;
   }
 }
 .mist-grid {
-  padding: 0 $small-padding;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  row-gap: $small-padding;
-  column-gap: $small-padding;
+  gap: $small-padding;
+  flex-wrap: wrap;
 
   &__card {
     display: grid;
@@ -105,24 +108,37 @@
     grid-template-rows: $mist-card-height;
     border-radius: $small-border-radius;
 
-    &-image {
-      grid-column: 1 / 3;
-      grid-row: 1 / 2;
-      width: 100%;
-      height: 100%;
-      object-position: center 25%;
-      border-radius: $small-border-radius;
-    }
+    img {
+      overflow: hidden;
+       grid-column: 1 / 3;
+       grid-row: 1 / 2;
+       border-radius: $small-border-radius;
+       object-position: center 20%;
+       width: 100%;
+       height: 100%;
+     }
 
-    &-infobox {
-      grid-column: 2 / 4;
-      grid-row: 1 / 2;
-      align-self: stretch;
-      background: rgba(0, 96, 150, 0.59);
-      backdrop-filter: blur(4px);
-      padding: $tiny-padding;
+     &-infobox {
+       grid-column: 2 / 4;
+       grid-row: 1 / 2;
+       align-self: stretch;
+       background: rgba(0, 96, 150, 0.59);
+       backdrop-filter: blur(4px);
+       padding: $tiny-padding;
+       width: fit-content;
     
-      color: white;
-    }
+       color: white;
+     }
   }
+
+   @include responsive(tablet) {
+     display: grid;
+     gap: $small-padding;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: $mist-card-height-t;
+
+     &__card {
+      grid-template-rows: $mist-card-height-t;
+     }
+   }
 }

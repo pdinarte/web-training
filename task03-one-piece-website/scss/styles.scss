@@ -50,3 +50,14 @@ hr {
     margin-right: $small-padding-d;
   }
 }
+
+.side-padding {
+  padding: 0 $small-padding;
+
+  @include responsive(tablet) {
+    padding: 0 $small-padding-t;
+  }
+  @include responsive(desktop) {
+    padding: 0 $small-padding-d;
+  }
+}
