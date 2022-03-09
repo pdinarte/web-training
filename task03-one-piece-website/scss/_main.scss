@@ -3,45 +3,86 @@ main {
   display: flex;
   flex-direction: column;
   justify-items: center;
-  margin-bottom: $margin-bottom-main;
 }
-.main__img-container {
-  height: $main-img-height;
-  width: auto;
-  overflow: hidden;
-  background-image: linear-gradient(rgba(255,255,255,0), rgb(255, 255, 255));
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 100% 60%;
-
-  @include responsive(tablet) {
-    height: $main-img-height-t;
-    background-image: none;
-  }
-}
-.main__img {
-  position: relative;
-  top: -10%;
-  left: -10%;
-  width: 120%;
-  height: 120%;
-
-  z-index: -1;
-}
-.main__sinopsis-box {
+.main__hero {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border-radius: $tiny-border-radius;
-  background-color: white;
-  box-shadow: 0px 0px 8px #B8E1FF;
-  padding: $tiny-padding;
-  margin-top: $medium-padding;
-  margin-bottom: $big-padding;
-  overflow: hidden;
+  height: fit-content;
+  
+  &-img {
+    height: $main-img-height;
+    width: auto;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(255,255,255,0), rgb(255, 255, 255));
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 60%;
+  
+    img {
+      position: relative;
+      top: -10%;
+      left: -10%;
+      width: 120%;
+      height: 120%;
+      z-index: -1;
+    }
+  }
+  &-sinopsis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: $tiny-border-radius;
+    background-color: white;
+    box-shadow: 0px 0px 8px #B8E1FF;
+    padding: $tiny-padding;
+    margin-top: $medium-padding;
+    overflow: hidden;
+  }
 
   @include responsive(tablet) {
-    margin-top: -50px;
+    &-img {
+      height: $main-img-height-t;
+      background-image: none;
+    }
+    &-sinopsis {
+      margin-top: -50px;
+    }
+  }
+
+  @include responsive(desktop) {
+    flex-direction: row;
+    margin-left: $small-padding-d;
+    margin-right: $small-padding-d;
+
+    &-img {
+      box-sizing: border-box;
+      height: max-content;
+      width: auto;
+      min-height: 100%;
+      border-radius: 16px 0px 0px 16px;
+     
+      img {
+        top: 0;
+      }
+    }
+    &-sinopsis {
+      box-sizing: border-box;
+      padding: $small-padding;
+      margin: 0;
+      width: 32%;
+      border-radius: 0;
+
+      .read-more-btn{
+        display: none;
+      }
+      .more-text {
+        display: block;
+      }
+      hr {
+        display: none;
+      }
+    }
+    
   }
 }
 .main__search-bar {
@@ -55,6 +96,7 @@ main {
   border-radius: $tiny-border-radius;
   box-sizing: border-box;
   padding: 16px 8px;
+  margin-top: $big-padding;
 }
 .main__section-header {
   display: flex;

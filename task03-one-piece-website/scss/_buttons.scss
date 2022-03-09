@@ -25,7 +25,11 @@ button {
   column-gap: $tiny-padding;
 
   color: $grey-0;
-
+/*
+  &:active {
+    background-color: $grey-4;
+  }
+*/
   @include responsive (desktop) {
     width: 90px;
 

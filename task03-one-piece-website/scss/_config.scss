@@ -4,18 +4,16 @@
 }
 
 /* PADDING */
-  //phone
 $tiny-padding: 8px;
-$small-padding: 16px; //main 
-$medium-padding: 19px;  //header 
-$big-padding: 48px;
-$margin-bottom-main: 70px;
-  //tablet
-$small-padding-t: 64px;
-$big-padding-t: 91px;
 
-//desktop
+$small-padding: 16px;
+$small-padding-t: 64px;
 $small-padding-d: 170px;
+
+$medium-padding: 19px;
+
+$big-padding: 48px;
+$big-padding-t: 91px;
 
 /* COLORS */
 $background-color: white;
@@ -25,28 +23,35 @@ $grey-1: #7D7D7D;
 $grey-2: #B5B5B5;
 $grey-4: #ECECEC;
 $black: #171717;
+
 /* BORDER */
 $tiny-border-radius: 6px;
 $small-border-radius: 8px;
 $medium-border-radius: 16px;
+
 /* COMPONENT SIZING */
 $nav-height: 78px;
-$search-bar-height: 56px;
-$main-img-height: 260px;
-$character-card-height: 230px;
-$character-card-width: 180px;
-$island-card-size: 195px;
-$island__info-box-size: 48px;
-$mist-card-height: 132px;
-
-//tablet
 $nav-height-t: 109px;
-$character-card-height-t: 184px;
-$main-img-height-t: 444px;
-$island-card-size-t: 200px;
-$mist-card-height-t: 175px;
-//desktop
 $nav-height-d: 100px;
+
+$search-bar-height: 56px;
+
+$main-img-height: 260px;
+$main-img-height-t: 444px;
+$main-img-height-d: 628px;
+
+$character-card-height: 230px;
+$character-card-height-t: 184px;
 $character-card-height-d: 279px;
+$character-card-width: 180px;
+
+$island-card-size: 195px;
+$island-card-size-t: 200px;
 $island-card-size-d: 300px;
+
+$mist-card-height: 132px;
+$mist-card-height-t: 175px;
+
+
+
 

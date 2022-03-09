@@ -1,0 +1,37 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (min-width: 0) { @content }
+  };
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 720px) { @content }
+  };
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 1280px) { @content }
+  };
+}
+
+.side-margin {
+  margin-left: $small-padding;
+  margin-right: $small-padding;
+
+  @include responsive(tablet) {
+    margin-left: $small-padding-t;
+    margin-right: $small-padding-t;
+  }
+  @include responsive(desktop) {
+    margin-left: $small-padding-d;
+    margin-right: $small-padding-d;
+  }
+}
+
+.side-padding {
+  padding: 0 $small-padding;
+
+  @include responsive(tablet) {
+    padding: 0 $small-padding-t;
+  }
+  @include responsive(desktop) {
+    padding: 0 $small-padding-d;
+  }
+}
+

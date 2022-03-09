@@ -1,5 +1,5 @@
 @import 'config';
-@import 'mediaQueries';
+@import 'responsive';
 @import 'buttons';
 @import 'text';
 @import 'icon';
@@ -31,27 +31,4 @@ hr {
 .color--grey {
   background-color: $grey-4;
 }
-.side-margin {
-  margin-left: $small-padding;
-  margin-right: $small-padding;
 
-  @include responsive(tablet) {
-    margin-left: $small-padding-t;
-    margin-right: $small-padding-t;
-  }
-  @include responsive(desktop) {
-    margin-left: $small-padding-d;
-    margin-right: $small-padding-d;
-  }
-}
-
-.side-padding {
-  padding: 0 $small-padding;
-
-  @include responsive(tablet) {
-    padding: 0 $small-padding-t;
-  }
-  @include responsive(desktop) {
-    padding: 0 $small-padding-d;
-  }
-}
