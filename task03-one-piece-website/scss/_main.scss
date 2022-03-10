@@ -73,7 +73,7 @@ main {
 
     &-img {
       box-sizing: border-box;
-      height: max-content;
+      height: auto;
       width: auto;
       min-height: 100%;
       border-radius: 16px 0px 0px 16px;
@@ -99,7 +99,6 @@ main {
         display: none;
       }
     }
-    
   }
 }
 .main__search-bar {
