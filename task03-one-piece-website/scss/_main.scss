@@ -64,6 +64,9 @@ main {
     &-sinopsis {
       margin-top: -50px;
     }
+    hr {
+      height: 1px;
+    }
   }
 
   @include responsive(desktop) {
