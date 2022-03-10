@@ -45,7 +45,6 @@
     min-height: $character-card-height-t;
     border-radius: 13.0265px;
   }
-
   @include responsive(desktop) {
     height: $character-card-height-d;
     min-height: $character-card-height-d;
@@ -55,6 +54,7 @@
 .island-card {
   position: relative;
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
   width: $island-card-size;
   height: $island-card-size;
@@ -64,19 +64,27 @@
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   overflow: hidden;
 
-  &__infobox {
+  justify-content: flex-end;
+
+  img {
     position: absolute;
+    width: 120%;
+    height: 120%;
+    left: -5%;
+  }
+  &__infobox {
     display: flex;
     flex-direction: column;
-    //box-sizing: border-box;
-    padding: $tiny-padding $small-padding;
+    box-sizing: border-box;
+
+    position: relative;
+    width: auto;
     margin: $tiny-padding;
-    align-self: flex-end;
+    padding: $tiny-padding $small-padding;
+    border-radius: 6px;
     
     background: rgba(0, 96, 150, 0.59);
     backdrop-filter: blur(4px);
-    
-    border-radius: 6px;
 
     color: white;
   }
