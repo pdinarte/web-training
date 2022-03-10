@@ -22,6 +22,12 @@ hr {
   border-width: 0;
   margin: $small-padding 0;
 }
+a { 
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
 .img--offset-center {
   object-position: center 70%; 
 }
