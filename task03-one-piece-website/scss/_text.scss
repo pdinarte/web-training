@@ -89,10 +89,16 @@
     line-height: 16px;
     letter-spacing: 0.5px;
 
-    @include responsive(desktop) {
-      font-family: Roboto Slab;
-      font-size: 16px;
+    @include responsive(tablet) {
+      font-family: 'Roboto Slab';
+      font-weight: 700;
       line-height: 20px;
+      letter-spacing: 0.1px;
+    }
+
+    @include responsive(desktop) {
+      font-size: 18px;
+      line-height: 24px;
       letter-spacing: 0.1px;
     }
   }
