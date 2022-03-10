@@ -27,6 +27,17 @@ main {
       z-index: -1;
     }
   }
+  &-logo{
+    align-self: center;
+    width: 163px;
+    height: 58px;
+    margin-bottom: 33px;
+    display: none;
+    
+    &.visible {
+      display: inline;
+    }
+  }
   &-sinopsis {
     display: flex;
     flex-direction: column;
@@ -43,6 +54,12 @@ main {
     &-img {
       height: $main-img-height-t;
       background-image: none;
+    }
+    &-logo {
+      display: none;
+      &.visible {
+        display: none;
+      }
     }
     &-sinopsis {
       margin-top: -50px;
