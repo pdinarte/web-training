@@ -11,16 +11,13 @@
 }
 
 .side-margin {
-  margin-left: $small-padding;
-  margin-right: $small-padding;
+  margin: 0 $small-padding;
 
   @include responsive(tablet) {
-    margin-left: $small-padding-t;
-    margin-right: $small-padding-t;
+    margin: 0 $small-padding-t;
   }
   @include responsive(desktop) {
-    margin-left: $small-padding-d;
-    margin-right: $small-padding-d;
+    margin: 0 $small-padding-d;
   }
 }
 

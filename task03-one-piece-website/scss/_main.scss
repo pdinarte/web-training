@@ -71,8 +71,7 @@ main {
 
   @include responsive(desktop) {
     flex-direction: row;
-    margin-left: $small-padding-d;
-    margin-right: $small-padding-d;
+    margin: 0 $small-padding-d; 
 
     &-img {
       box-sizing: border-box;

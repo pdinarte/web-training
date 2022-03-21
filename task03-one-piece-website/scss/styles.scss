@@ -28,12 +28,27 @@ a {
     cursor: pointer;
   }
 }
-.img--offset-center {
+.img--center {
   object-position: center 70%; 
+  @include responsive(tablet) {
+    object-position: center 50%; 
+  }
 }
-.img--position-top {
+.img--portgas {
+  @include responsive(tablet) {
+    object-position: center 30%; 
+  }
+}
+.img--roronoa {
+  @include responsive(tablet) {
+    object-position: top; 
+  }
+}
+.img--nico {
   object-position: top;
 }
+
+
 .color--grey {
   background-color: $grey-4;
 }
