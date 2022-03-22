@@ -1,0 +1,125 @@
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.main__hero {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  
+  &-img {
+    height: $main-img-height;
+    width: auto;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(255,255,255,0), rgb(255, 255, 255));
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 60%;
+  
+    img {
+      position: relative;
+      top: -10%;
+      left: -10%;
+      width: 120%;
+      height: 120%;
+      z-index: -1;
+    }
+  }
+  &-logo{
+    align-self: center;
+    width: 163px;
+    height: 58px;
+    margin-bottom: 33px;
+    display: none;
+    
+    &.visible {
+      display: inline;
+    }
+  }
+  &-sinopsis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: $tiny-border-radius;
+    background-color: white;
+    box-shadow: 0px 0px 8px #B8E1FF;
+    padding: $tiny-padding;
+    margin-top: $medium-padding;
+    overflow: hidden;
+  }
+
+  @include responsive(tablet) {
+    &-img {
+      height: $main-img-height-t;
+      background-image: none;
+    }
+    &-logo {
+      display: none;
+      &.visible {
+        display: none;
+      }
+    }
+    &-sinopsis {
+      margin-top: -50px;
+    }
+    hr {
+      height: 1px;
+    }
+  }
+
+  @include responsive(desktop) {
+    flex-direction: row;
+    margin: 0 $small-padding-d; 
+
+    &-img {
+      box-sizing: border-box;
+      height: auto;
+      width: auto;
+      min-height: 100%;
+      border-radius: 16px 0px 0px 16px;
+     
+      img {
+        top: 0;
+      }
+    }
+    &-sinopsis {
+      box-sizing: border-box;
+      padding: $small-padding;
+      margin: 0;
+      width: 32%;
+      border-radius: 0;
+
+      .read-more-btn{
+        display: none;
+      }
+      .more-text {
+        display: block;
+      }
+      hr {
+        display: none;
+      }
+    }
+  }
+}
+.main__search-bar {
+  display: flex;
+  flex-basis: content;
+  align-items: center;
+  column-gap: 25px;
+  color: $grey-1;
+  border: 1px solid $grey-2;
+  height: $search-bar-height;
+  border-radius: $tiny-border-radius;
+  box-sizing: border-box;
+  padding: 16px 8px;
+  margin-top: $big-padding;
+}
+.main__section-header {
+  display: flex;
+  margin-top: $big-padding;
+  margin-bottom: 32px;
+  justify-content: space-between;
+  align-items: center;
+}
