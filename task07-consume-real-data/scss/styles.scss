@@ -1,0 +1,55 @@
+@import 'config';
+@import 'responsive';
+@import 'buttons';
+@import 'text';
+@import 'icon';
+@import 'footer';
+@import 'nav';
+@import 'cards';
+@import 'main';
+
+
+body {
+  font-family: "Roboto Slab", "Roboto";
+}
+img {
+  object-fit: cover;
+}
+hr {
+  width: 100%;
+  background-color: $primary-dark-1;
+  height: .5px;
+  border-width: 0;
+  margin: $small-padding 0;
+}
+a { 
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.img--center {
+  object-position: center 70%; 
+  @include responsive(tablet) {
+    object-position: center 50%; 
+  }
+}
+.img--portgas {
+  @include responsive(tablet) {
+    object-position: center 30%; 
+  }
+}
+.img--roronoa {
+  @include responsive(tablet) {
+    object-position: top; 
+  }
+}
+.img--nico {
+  object-position: top;
+}
+
+
+.color--grey {
+  background-color: $grey-4;
+}
+

@@ -1,0 +1,113 @@
+/* TEXT STYLING */
+  //headings
+  h1 {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: $small-padding;
+    width: 100%;
+  }
+  h2 {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+
+    @include responsive(desktop) {
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+  h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+
+    @include responsive(tablet) {
+      font-family: Roboto Slab;
+      font-style: bold;
+      font-size: 16px;
+    }
+
+    @include responsive(desktop) {
+      font-size: 22px;
+      line-height: 28px; 
+    }
+  }
+    //body
+  p{
+    width: 100%;
+  }
+  .p-large {
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    letter-spacing: 0.15000000596046448px;
+  }
+  .p-medium {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+  }
+  .p-small {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    @include responsive(desktop) {
+      gap: 8px;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+    }
+  }
+    //labels
+  .l3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+
+    @include responsive(tablet) {
+      font-family: 'Roboto Slab';
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0.1px;
+    }
+
+    @include responsive(desktop) {
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.1px;
+    }
+  }
+
+    //dynamic text
+  .more-text {
+    display: none;
+  }
+  .show-text.visible .more-text{
+    display: inline;
+  }
+  
