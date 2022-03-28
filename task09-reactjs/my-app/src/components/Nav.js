@@ -9,6 +9,7 @@ class Nav extends React.Component {
 
   render() {
     return (
+      <>
       <nav className="side-margin">
         <button className ="nav__menu fa-solid fa-bars"></button>
         <img className ="nav__logo" src="images/logo.png" />
@@ -23,6 +24,7 @@ class Nav extends React.Component {
           </div>
         </div>
       </nav>
+      </>
     )    
   }
 }
