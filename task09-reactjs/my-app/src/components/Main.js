@@ -1,28 +1,51 @@
 import React from 'react'
+import CardGrid from './CardGrid';
+import MainSection from './MainSection';
 
 class Main extends React.Component {
 
-  render() {
+  constructor() {
+    super();
+    this.state = {
+      islands : [],
+      characters : [],
+      mysticObjects : []
+    };
+    this.URL = 'https://static.akurey.com/trainings/OnePieceInformation.json';
+  }
+
+  componentDidMount () {
+    fetch( this.URL )
+    .then( response => response.json() )
+    .then( response => {
+      response.characters.sort(this.sortByName);
+      response.islands.sort(this.sortByName);
+      response.mysticObjects.sort(this.sortByName);
+      this.setState(response);
+    })
+    .catch((e) => console.log('Something went wrong while fetching data from '+this.URL+'. See error below:\n'+ e))
+  }
+
+  sortByName = (object1, object2) => {
+    let name1 = object1.name.toLowerCase();
+    let name2 = object2.name.toLowerCase();
+    if (name1 < name2) {return -1;}
+    if (name1 > name2) {return 1;}
+    return 0;
+  };
+
+  render () {    
     return (
       <>
       {/* <!-- characters --> */}
-      <div class="main__section-header side-margin">
-        <h2>Characters</h2>
-        <a class="text-btn" href="/characters"><p class="p-medium">See all</p></a>
-      </div>
-      <div id="characters-section" class="card-grid side-padding" />
+      <MainSection title="Characters" to="/characters" />
+      <CardGrid type="character" items={this.state.characters.slice(0,4)}/>
       {/* <!-- islands --> */}
-      <div class="main__section-header side-margin">
-        <h2>Islands</h2>
-        <a class="text-btn" href="/islands"><p class="p-medium">See all</p></a>
-      </div>
-      <div id="islands-section" class="card-grid side-padding"></div>
+      <MainSection title="Islands" to="/islands" />
+      <CardGrid type="island" items={this.state.islands.slice(0,3)}/>
       {/* <!-- mist objects --> */}
-      <div class="main__section-header side-margin">
-        <h2>Mist objects</h2>
-        <a class="text-btn" href="/mist-objects"><p class="p-medium">See all</p></a>
-      </div>
-      <div id="myst-section" class="mist-grid side-padding"></div>
+      <MainSection title="Mystic objects" to="/mysticObjects" />
+      <CardGrid type="mystic" items={this.state.mysticObjects.slice(0,4)}/>
       </>
     )
   }
