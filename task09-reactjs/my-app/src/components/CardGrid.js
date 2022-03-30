@@ -7,16 +7,15 @@ const CardGrid = ({type, items}) => {
 
   return (
     <>
-    
       {items && items.length !== 0 ? (
         type !== "character" ? (
           type !== "island" ? (
             <div className="mist-grid side-padding">
-              {items.map(item => { return (<MysticCard />) })}
+              {items.map(item => { return (<MysticCard image={item.img} name={item.name} description={item.description}/>) })}
             </div>
             ) : (
             <div className="card-grid side-padding" >
-              {items.map(item => { return (<IslandCard />) })}
+              {items.map(item => { return (<IslandCard image={item.img} name={item.name} location={item.Location}/>) })}
             </div>
           )
         ) : (
@@ -27,8 +26,7 @@ const CardGrid = ({type, items}) => {
       ) : (
         null
         //nothing to render
-      )}    
-    
+      )}   
     </>
   )
 }

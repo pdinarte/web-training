@@ -3,7 +3,26 @@ import './css/styles.css';
 
 class Hero extends React.Component {
 
-  render() {
+  constructor() {
+    super();
+    this.state = {
+      readText : 'All',
+      read : false,
+      readState : '',
+    };
+    this.changeReadState = this.changeReadState.bind(this);
+    this.URL = 'https://static.akurey.com/trainings/OnePieceInformation.json';
+  }
+  
+  changeReadState () {
+    if(!this.state.read){
+      this.setState({readText : 'Less', read : true, readState : 'visible'})}
+    else {
+      this.setState({readText : 'All', read : false, readState : '',})
+    }
+  }
+  
+  render () {
     return (
       <>
       <div className="main__hero">
@@ -12,11 +31,11 @@ class Hero extends React.Component {
           <img src="images/everyone.png" alt=""/>
         </div>
         {/* <!-- read more logo --> */}
-        <img className="main__hero-logo" src="images/logo.png" alt=""/>
+        <img className={`main__hero-logo ${this.state.readState}`} src="images/logo.png" alt=""/>
         {/* <!-- sinopsis-box --> */}
         <section className="main__hero-sinopsis side-margin">
           <h1>Sinopsis</h1>
-          <p className="p-medium show-text" >
+          <p className={`p-medium show-text ${this.state.readState}`} >
             Dawn Island is an island located in the East Blue and where the Goa Kingdom is situated.
             <br /><br />
             It is the home island of Monkey D. Luffy and the starting point of his journey into piracy, as well as the home island of his father, Monkey D. Dragon.
@@ -30,7 +49,10 @@ class Hero extends React.Component {
             </span>
           </p>
           <hr />
-          <button className="text-btn read-more-btn"><i className="fa-solid fa-chevron-down"></i><p className="p-large">Read All</p></button>
+          <button className="text-btn read-more-btn" onClick={this.changeReadState}>
+            <i className={`fa-solid fa-chevron-${this.state.read ? "down" : "up"}`}></i>
+            <p className="p-large">Read {this.state.readText}</p>
+          </button>
         </section>
       </div>
       </>
