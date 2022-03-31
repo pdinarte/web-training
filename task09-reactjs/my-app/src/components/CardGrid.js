@@ -5,28 +5,32 @@ import MysticCard from './cards/MysticCard';
 
 const CardGrid = ({type, items}) => {
 
-  return (
-    <>
-      {items && items.length !== 0 ? (
-        type !== "character" ? (
-          type !== "island" ? (
-            <div className="mist-grid side-padding">
-              {items.map(item => { return (<MysticCard image={item.img} name={item.name} description={item.description}/>) })}
-            </div>
-            ) : (
-            <div className="card-grid side-padding" >
-              {items.map(item => { return (<IslandCard image={item.img} name={item.name} location={item.Location}/>) })}
-            </div>
-          )
-        ) : (
+  const switchCard = (type) => {
+    switch (type) {
+      case "character":
+        return (
           <div className="card-grid side-padding" >
             {items.map(item => { return (<CharacterCard image={item.img} name={item.name}/>) })}
           </div>
         )
-      ) : (
-        null
-        //nothing to render
-      )}   
+      case "island":
+        return (
+          <div className="card-grid side-padding" >
+            {items.map(item => { return (<IslandCard image={item.img} name={item.name} location={item.Location}/>) })}
+          </div>
+        )
+      default:
+        return (
+          <div className="mist-grid side-padding">
+            {items.map(item => { return (<MysticCard image={item.img} name={item.name} description={item.description}/>) })}
+          </div>
+        )
+    }
+  }
+
+  return (
+    <>
+      {items && items.length !== 0 && ( switchCard(type) )}           
     </>
   )
 }
