@@ -10,19 +10,19 @@ const CardGrid = ({type, items}) => {
       case "character":
         return (
           <div className="card-grid side-padding" >
-            {items.map(item => { return (<CharacterCard image={item.img} name={item.name}/>) })}
+            {items.map(item => { return (<CharacterCard key={item.name} image={item.img} name={item.name}/>) })}
           </div>
         )
       case "island":
         return (
           <div className="card-grid side-padding" >
-            {items.map(item => { return (<IslandCard image={item.img} name={item.name} location={item.Location}/>) })}
+            {items.map(item => { return (<IslandCard key={item.name} image={item.img} name={item.name} location={item.Location}/>) })}
           </div>
         )
       default:
         return (
           <div className="mist-grid side-padding">
-            {items.map(item => { return (<MysticCard image={item.img} name={item.name} description={item.description}/>) })}
+            {items.map(item => { return (<MysticCard key={item.name} image={item.img} name={item.name} description={item.description}/>) })}
           </div>
         )
     }

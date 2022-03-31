@@ -23,7 +23,7 @@ class Main extends React.Component {
       response.mysticObjects.sort(this.sortByName);
       this.setState(response);
     })
-    .catch((e) => console.log('Something went wrong while fetching data from '+this.URL+'. See error below:\n'+ e))
+    .catch((e) => console.error('Something went wrong while fetching data from '+this.URL+'. See error below:\n'+ e))
   }
 
   sortByName = (object1, object2) => {
