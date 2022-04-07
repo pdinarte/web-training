@@ -1,16 +1,15 @@
 <template>
 <div>
   <div class="card-grid side-padding" v-if="type === 'character'">
-    <CharacterCard image=""/>
-    <!-- {items.map(item => { return (<CharacterCard key={item.name} image={item.img} name={item.name}/>) })} -->
+    <CharacterCard v-for="item in items.characters" :key="item.name" :image="item.img" :name="item.name" />
   </div>
 
   <div class="card-grid side-padding" v-else-if="type === 'island'">
-    <!-- {items.map(item => { return (<IslandCard key={item.name} image={item.img} name={item.name} location={item.Location}/>) })} -->
+    <IslandCard v-for="item in items.islands" :key="item.name" :image="item.img" :name="item.name" :location="item.Location" />
   </div>
 
   <div class="mist-grid side-padding" v-else>
-    <!-- {items.map(item => { return (<MysticCard key={item.name} image={item.img} name={item.name} description={item.description}/>) })} -->
+    <MysticCard v-for="item in items.mysticObjects" :key="item.name" :image="item.img" :name="item.name" :description="item.description" />
   </div>
 </div>
 </template>
