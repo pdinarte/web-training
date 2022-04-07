@@ -1,7 +1,7 @@
 <template>
   <div class="character-card">
     <img class="card-grid__img" :src=image alt=""/>
-    <h3 class="character-card__name">{name}</h3>
+    <h3 class="character-card__name">{{name}}</h3>
   </div>
 </template>
 

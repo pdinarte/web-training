@@ -2,8 +2,8 @@
   <div class="mist-grid__card">
     <img :src=image alt=""/>
     <div class="mist-grid__card-infobox">
-      <p class="l3">{name}</p>
-      <p class="p-small">{description}</p>
+      <p class="l3">{{name}}</p>
+      <p class="p-small">{{description}}</p>
     </div>
   </div>
 </template>
