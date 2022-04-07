@@ -1,8 +1,8 @@
 <template>
   <nav class="side-margin">
-    <button class="nav__menu fa-solid fa-bars"></button>
+    <button class="nav__menu fa-solid fa-bars" @click="showMenu"></button>
     <img class="nav__logo" src="images/logo.png" alt="">
-    <div class="nav__dropdown">
+    <div class="nav__dropdown" :class="{'visible' : this.data.isDisplayed}">
       <a href="/" >Home</a>
       <a href="/characters.html">Characters</a>
       <a href="/islands">Islands</a>
@@ -18,13 +18,19 @@
 <script>
 export default {
   name: 'Nav',
-  // props: {
-  //   msg: String
-  // }
+  data () {
+    return {
+      data : {
+        isDisplayed : false
+      }
+    }
+  },
+  methods : {
+    showMenu : function (event) {
+      this.data = {isDisplayed : !this.data.isDisplayed}
+    }
+  }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-/* estilos css */
-</style>
+
