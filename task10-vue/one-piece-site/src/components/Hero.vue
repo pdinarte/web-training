@@ -5,11 +5,11 @@
       <img src="images/everyone.png" alt="">
     </div>
     <!-- read more logo -->
-    <img class="main__hero-logo" src="images/logo.png" alt="">
+    <img class="main__hero-logo" :class="this.data.readState" src="images/logo.png" alt="">
     <!-- sinopsis-box -->
     <section class="main__hero-sinopsis side-margin">
       <h1>Sinopsis</h1>
-      <p class="p-medium show-text">
+      <p class="p-medium show-text" :class="this.data.readState">
         Dawn Island is an island located in the East Blue and where the Goa Kingdom is situated.
         <br><br>
         It is the home island of Monkey D. Luffy and the starting point of his journey into piracy, as well as the home island of his father, Monkey D. Dragon.
@@ -23,7 +23,10 @@
         </span>
       </p>
       <hr>
-      <button class="text-btn read-more-btn"><i class="fa-solid fa-chevron-down"></i><p class="p-large">Read All</p></button>
+      <button class="text-btn read-more-btn" @click="this.changeText">
+        <i class="fa-solid" :class="{'fa-chevron-down' : this.data.read, 'fa-chevron-up' : !this.data.read}"></i>
+        <p class="p-large">Read {{this.data.readText}}</p>
+      </button>
     </section>
   </div>
 </template>
@@ -32,6 +35,24 @@
 
 <script>
 export default {
-  name : 'Hero'
+  name : 'Hero',
+  data () {
+    return {
+      data : {
+        readText : 'All',
+        read : false,
+        readState : '',
+      }
+    }
+  },
+  methods : {
+    changeText : function (event) {
+      if(!this.data.read){
+        this.data = {readText : 'Less', read : true, readState : 'visible'}
+      } else {
+        this.data = {readText : 'All', read : false, readState : ''}
+      }
+    }
+  }
 }
 </script>
