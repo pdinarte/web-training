@@ -1,9 +1,9 @@
 <template>
-  <div className="mist-grid__card">
+  <div class="mist-grid__card">
     <img :src=image alt=""/>
-    <div className="mist-grid__card-infobox">
-      <p className="l3">{name}</p>
-      <p className="p-small">{description}</p>
+    <div class="mist-grid__card-infobox">
+      <p class="l3">{name}</p>
+      <p class="p-small">{description}</p>
     </div>
   </div>
 </template>

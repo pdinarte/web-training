@@ -1,9 +1,9 @@
 <template>
-  <div className="island-card">
-    <img className="card-grid__img" :src=image alt=""/>
-    <div className="island-card__infobox">
-      <p className="l3">{name}</p>
-      <p className="p-small"><i className="fa-solid fa-location-dot"></i> {location}</p>
+  <div class="island-card">
+    <img class="card-grid__img" :src=image alt=""/>
+    <div class="island-card__infobox">
+      <p class="l3">{name}</p>
+      <p class="p-small"><i class="fa-solid fa-location-dot"></i> {location}</p>
     </div>
   </div>
 </template>

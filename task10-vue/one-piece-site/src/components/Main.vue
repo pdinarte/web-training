@@ -2,23 +2,25 @@
   <div> 
     <!-- characters -->
     <MainSection title="Characters" to="/characters" />
-    <div id="characters-section" class="card-grid side-padding"></div>
+    <CardGrid type="character" :items=characters.slice(0,4) />
     <!-- islands -->
     <MainSection title="Islands" to="/islands" />
-    <div id="islands-section" class="card-grid side-padding"></div>
+    <CardGrid type="island" :items=islands.slice(0,3) />
     <!-- mist objects -->
     <MainSection title="Mystic objects" to="/mysticObjects" />
-    <div id="myst-section" class="mist-grid side-padding"></div>
+    <CardGrid type="mystic" :items=mysticObjects.slice(0,4) />
   </div>
 </template>
 
 <script>
 import MainSection from './MainSection.vue'
+import CardGrid from './cards/CardGrid.vue'
 
 export default {
   name : 'Main',
   components : {
     MainSection,
+    CardGrid,
   }
 }
 </script>
