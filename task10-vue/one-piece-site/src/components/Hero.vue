@@ -24,7 +24,7 @@
       </p>
       <hr>
       <button class="text-btn read-more-btn" @click="this.changeText">
-        <i class="fa-solid" :class="{'fa-chevron-down' : this.read, 'fa-chevron-up' : !this.read}"></i>
+        <i class="fa-solid" :class="{'fa-chevron-up' : this.read, 'fa-chevron-down' : !this.read}"></i>
         <p class="p-large">Read {{this.readText}}</p>
       </button>
     </section>
