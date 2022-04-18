@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <img src="images/placeholder.svg" alt="" />
+    <img src="images/placeholder.svg" alt="One Piece Isotype" />
     <p class="p-small footer__text-container">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit at vel congue scelerisque tortor tortor.
     </p>

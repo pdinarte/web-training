@@ -2,10 +2,10 @@
   <div class="main__hero">
     <!-- main image -->
     <div class="main__hero-img"> 
-      <img src="images/everyone.png" alt="">
+      <img src="images/everyone.png" alt="One Piece characters together">
     </div>
     <!-- read more logo -->
-    <img class="main__hero-logo" :class="this.data.readState" src="images/logo.png" alt="">
+    <img class="main__hero-logo" :class="this.data.readState" src="images/logo.png" alt="One Piece logo">
     <!-- sinopsis-box -->
     <section class="main__hero-sinopsis side-margin">
       <h1>Sinopsis</h1>

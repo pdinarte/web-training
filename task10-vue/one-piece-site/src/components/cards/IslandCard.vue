@@ -1,6 +1,6 @@
 <template>
   <div class="island-card">
-    <img class="card-grid__img" :src=image alt=""/>
+    <img class="card-grid__img" :src=image />
     <div class="island-card__infobox">
       <p class="l3">{{name}}</p>
       <p class="p-small"><i class="fa-solid fa-location-dot"></i> {{location}}</p>
