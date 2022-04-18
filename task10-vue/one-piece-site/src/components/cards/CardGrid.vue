@@ -1,29 +1,25 @@
 <template>
 <div>
   <div class="card-grid side-padding" v-if="type === 'character'">
-    <CharacterCard v-for="item in items" :key="item.name" :image="'/images/'+item.img" :name="item.name" />
+    <Card v-for="item in items" :key="item.name" :type="'character'" :image="'/images/'+item.img" :name="item.name" />
   </div>
   <div class="card-grid side-padding" v-else-if="type === 'island'">
-    <IslandCard v-for="item in items" :key="item.name" :image="'/images/'+item.img" :name="item.name" :location="item.Location" />
+    <Card v-for="item in items" :key="item.name" :type="'island'" :image="'/images/'+item.img" :name="item.name" :location="item.Location" />
   </div>
   <div class="mist-grid side-padding" v-else>
-    <MysticCard v-for="item in items" :key="item.name" :image="'/images/'+item.img" :name="item.name" :description="item.description" />
+    <Card v-for="item in items" :key="item.name" :type="'mystObject'" :image="'/images/'+item.img" :name="item.name" :description="item.description" />
   </div>
 </div>
 </template>
 
 
 <script>
-  import CharacterCard from './CharacterCard.vue'
-  import IslandCard from './IslandCard.vue'
-  import MysticCard from './MysticCard.vue'
+  import Card from './Card.vue' 
 
   export default {
     name : "CardGrid",
     components : {
-      CharacterCard,
-      IslandCard,
-      MysticCard,
+      Card,
     },
     props : {
       type : String,
