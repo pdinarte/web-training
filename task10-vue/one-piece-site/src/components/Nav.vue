@@ -2,7 +2,7 @@
   <nav class="side-margin">
     <button class="nav__menu fa-solid fa-bars" @click="showMenu"></button>
     <img class="nav__logo" src="images/logo.png" alt="One Piece logo">
-    <div class="nav__dropdown" :class="{'visible' : this.data.isDisplayed}">
+    <div class="nav__dropdown" :class="{'visible' : this.isDisplayed}">
       <a v-for="page in pages" :key="page.name" :href="page.href">{{page.name}}</a>
       <div class="nav__dropdown-language">
         <button class="language-btn color--grey"><h2>English</h2><img src="images/flag_en.png" alt="Britain flag" class="flag" /></button>
@@ -17,9 +17,7 @@ export default {
   name: 'Nav',
   data () {
     return {
-      data : {
-        isDisplayed : false
-      },
+      isDisplayed : false,
       pages : [
         {name : 'Home', href : "/"},
         {name : 'Characters', href : "/characters"},
@@ -30,7 +28,7 @@ export default {
   },
   methods : {
     showMenu : function (event) {
-      this.data = {isDisplayed : !this.data.isDisplayed}
+      this.isDisplayed = !this.isDisplayed
     }
   }
 }
