@@ -20,19 +20,17 @@ class Nav extends React.Component {
   render() {
     return (
       <>
-      <nav className="side-margin">
-        <button className ={`nav__menu fa-solid fa-bars ${this.state.showMenu ? "fa-xmark" : ""}`}
-                onClick={this.displayMenu}>
-        </button>
-        <Logo type="nav" />
-        <div className ={`nav__dropdown ${this.state.showMenu ? 'visible' : ''}`}>
-          <Link to="/" title="Home" />
-          <Link to="/characters.html" title="Characters" />
-          <Link to="/islands" title="Islands" />
-          <Link to="/mist-objects" title="Mist Objects" />
-          <div className ="nav__dropdown-language">
-            <LangButton color='grey' lang='en' />
-            <LangButton lang='es'/>
+      <nav class="side-margin">
+        <button class="nav__menu fa-solid fa-bars"></button>
+        <img class="nav__logo" src="images/logo.png" alt="" />
+        <div class="nav__dropdown">
+          <a href="/" >Home</a>
+          <a href="/characters.html">Characters</a>
+          <a href="/islands">Islands</a>
+          <a href="/mist-objects">Mist Objects</a>
+          <div class="nav__dropdown-language">
+            <button class="language-btn color--grey"><h2>English</h2><img src="images/flag_en.png" alt="" class="flag" /></button>
+            <button class="language-btn"><h2>Spanish</h2><img src="images/flag_es.png" alt="" class="flag" /></button>
           </div>
         </div>
       </nav>
