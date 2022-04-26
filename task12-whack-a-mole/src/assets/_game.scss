@@ -1,13 +1,13 @@
 h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   line-height: 1;
   margin: 2rem 5rem;
   background: $primary-color;  
   font-family: $font-title;
 
   @include responsive(tablet) {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   @include responsive(desktop) {
     font-size: 10rem;
@@ -21,11 +21,37 @@ h1 {
 }
 
 .game {
-  width: 600px;
-  height: 400px;
+  height: 350px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
+  @include responsive-width;
+  @include responsive(tablet) {
+    height: 500px;
+  }
+  @include responsive(desktop) {
+    height: 650px;
+  }
+}
+
+.gameOptions {
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  height: fit-content;
+  margin: 40px auto;
+  gap: 20px;
+  
+  @include responsive-width;
+}
+
+input {
+  flex-grow: 4;
+  height: auto;
+  border-radius: .2rem;
+  font-family: $font-title;
+
+  @include responsive-font-size;
 }
 
 .hole {
@@ -42,7 +68,14 @@ h1 {
     height:70px;
     position: absolute;
     z-index: 2;
-    bottom: -30px;
+    bottom: -20px;
+
+    @include responsive(tablet) {
+      bottom: -28px;
+    }
+    @include responsive(desktop) {
+      bottom: -30px;
+    }
   }
 }
 
@@ -61,9 +94,14 @@ h1 {
 }
 
 button {
-  position: absolute;
-  left: 15rem;
-  padding: 2rem;
-  font-size: x-large;
+  flex-grow: 2;
+  height: fit-content;
+  padding: 10px;
+  border-radius: .2rem;
   background-color: $secondary-color;
+  
+  color: white;
+  font-weight: bold;
+
+  @include responsive-font-size;
 }
