@@ -10,12 +10,12 @@ h1 {
     font-size: 5rem;
   }
   @include responsive(desktop) {
-    font-size: 10rem;
+    font-size: 8rem;
   }
 }
 
 .score {
-  background: $primary-dark;
+  background: rgba(255,255,255,0);
   line-height: 1;
   border-radius: 1rem;
 }
