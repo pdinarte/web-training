@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML + JS + CSS</title>
   <link rel="stylesheet" href="src/assets/style.css">
 </head>
@@ -46,8 +47,8 @@
     <button onClick="game.startGame()">WHACK!</button>
   </div>
   
-  <audio src="src/assets/sounds/hihat.wav"></audio>
-  <audio src="src/assets/sounds/kick.wav"></audio>
+  <audio id="audioFail" src="src/assets/sounds/hihat.wav"></audio>
+  <audio id="audioSuccess" src="src/assets/sounds/kick.wav"></audio>
   <script src="src/game.js"></script>
 </body>
 
