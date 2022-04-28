@@ -37,7 +37,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto 50px auto;
-  cursor: url('imgs/hammer.cur'), url('imgs/hammer.png'), pointer;
+  cursor: url('./imgs/hammer.png'), pointer;
   @include responsive-width;
   @include responsive(tablet) {
     height: 500px;
