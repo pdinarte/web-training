@@ -114,9 +114,9 @@ button {
 .bestScores {
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
+  padding: 20px;
   gap: 10px;
-  width: fit-content;
+  width: 50%;
   background-color: $primary-color;
   filter: sepia(1);
   margin: 0 auto;
@@ -124,12 +124,13 @@ button {
 
   .row {
     display: grid;
-    grid-template-columns: 20% auto 20%;
+    grid-template-columns: 15% auto 25%;
     column-gap: 10px;
+    text-align: center;
   }
 
   .position {
-    padding: 5px 10px;
+    padding: 5px;
     text-align: center;
     background-color: $secondary-color;
     filter: sepia(1);
