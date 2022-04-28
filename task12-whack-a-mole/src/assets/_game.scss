@@ -116,15 +116,16 @@ button {
   flex-direction: column;
   padding: 20px 0;
   gap: 10px;
-  width: 40%;
+  width: fit-content;
   background-color: $primary-color;
   filter: sepia(1);
   margin: 0 auto;
   border-radius: .2rem;
 
   .row {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    column-gap: 10px;
   }
 
   .position {

@@ -17,11 +17,11 @@ function Game() {
     let level = 1;
     let name;
     let bestScores = [
-      {"Anonymous" : name, "score" : 0},
-      {"Anonymous" : name, "score" : 0},
-      {"Anonymous" : name, "score" : 0},
-      {"Anonymous" : name, "score" : 0},
-      {"Anonymous" : name, "score" : 0},
+      {"name" : "Anonymous", "score" : 0},
+      {"name" : "Anonymous", "score" : 0},
+      {"name" : "Anonymous", "score" : 0},
+      {"name" : "Anonymous", "score" : 0},
+      {"name" : "Anonymous", "score" : 0},
     ];
 
     this.initialize = () => {
@@ -67,7 +67,7 @@ function Game() {
 
     this.levelUp = () => {
       if(score > 5 && minPeepTime >= 500) {
-        minPeepTime -= 500;
+        minPeepTime -= 50;
         level++;
         levelText.textContent = level;   
       }
@@ -90,7 +90,8 @@ function Game() {
     this.changeScore = () => {
       scoreBoard.textContent = score;
       let newScore = false;
-      for(let i = 0; i < 5; i++) {
+      var i;
+      for(i = 0; i < 5; i++) {
         if(score >= bestScores[i].score) {
           bestScores.splice(i,0,{"name" : name, "score" : score})
           bestScores.pop();
@@ -99,8 +100,11 @@ function Game() {
         }
       }
       if(newScore) {
-        //lo coloca en la tabla si cambio
-        // document.getElementById('bestScores').innerHTML = bestScores.map('<div class')
+        while(i < 5){
+          document.querySelector('.name'+i).textContent = bestScores[i].name;
+          document.querySelector('.points'+i).textContent = bestScores[i].score;
+          i++;
+        }
       }
     }
 }
