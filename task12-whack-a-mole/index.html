@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML + JS + CSS</title>
   <link rel="stylesheet" href="src/assets/style.css">
@@ -10,8 +11,37 @@
 
 <body>
   <h1>Whack-a-mole! <span class="score">0</span></h1>
-  <div class="scoreboard">
-    WHACK!
+  <div class="bestScores">
+    <div class="row">
+      <h2>N°</h2>
+      <h2>Player</h2>
+      <h2>Score</h2>
+    </div>
+    <div class="row">
+      <div class="position">1</div>
+      <span class="name">Anonymous</span>
+      <span class="points">0</span>
+    </div>
+    <div class="row">
+      <div class="position">2</div>
+      <span class="name">Anonymous</span>
+      <span class="points">0</span>
+    </div>
+    <div class="row">
+      <div class="position">3</div>
+      <span class="name">Anonymous</span>
+      <span class="points">0</span>
+    </div>
+    <div class="row">
+      <div class="position">4</div>
+      <span class="name">Anonymous</span>
+      <span class="points">0</span>
+    </div>
+    <div class="row">
+      <div class="position">5</div>
+      <span class="name">Anonymous</span>
+      <span class="points">0</span>
+    </div>
   </div>
   <div class="game">
     <div class="hole hole1">
@@ -42,8 +72,9 @@
       <div class="mole"></div>
     </div>
   </div>
+  <h2>Level <span class="level">1</span></h2>
   <div class="gameOptions">
-    <input type="text" placeholder="Nombre del jugador">
+    <input id="name" type="text" placeholder="Nombre del jugador">
     <button onClick="game.startGame()">WHACK!</button>
   </div>
   

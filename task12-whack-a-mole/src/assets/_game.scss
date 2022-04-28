@@ -14,6 +14,16 @@ h1 {
   }
 }
 
+h2 {
+  text-align: center;
+  font-family: $font-title;
+  font-size: 1rem;
+  font-weight: bold;
+  color: $secondary-color;
+  filter: sepia(1);
+  margin: 0 0 10px 0;
+}
+
 .score {
   background: rgba(255,255,255,0);
   line-height: 1;
@@ -24,7 +34,8 @@ h1 {
   height: 350px;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
+  cursor: url('imgs/hammer.cur'), url('imgs/hammer.png'), pointer;
   @include responsive-width;
   @include responsive(tablet) {
     height: 500px;
@@ -37,7 +48,7 @@ h1 {
 .gameOptions {
   display: flex;
   height: fit-content;
-  margin: 40px auto;
+  margin: 0 auto 100px auto;
   gap: 10px;
   @include responsive-width;
 }
@@ -97,12 +108,31 @@ button {
   background-color: $secondary-color;
   color: white;
   @include responsive-font-size;
+  filter: sepia(1);
 }
 
-.scoreboard {
-  width: fit-content;
+.bestScores {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  gap: 10px;
+  width: 40%;
   background-color: $primary-color;
   filter: sepia(1);
   margin: 0 auto;
   border-radius: .2rem;
+
+  .row {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .position {
+    padding: 5px 10px;
+    text-align: center;
+    background-color: $secondary-color;
+    filter: sepia(1);
+    border-radius: .2rem;
+    color: white;
+  }
 }
