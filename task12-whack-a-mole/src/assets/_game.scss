@@ -22,6 +22,8 @@ h2 {
   color: $secondary-color;
   filter: sepia(1);
   margin: 0 0 10px 0;
+
+  @include responsive-font-size;
 }
 
 .score {
@@ -127,6 +129,7 @@ button {
     grid-template-columns: 15% auto 25%;
     column-gap: 10px;
     text-align: center;
+    @include responsive-font-size;
   }
 
   .position {
@@ -136,5 +139,9 @@ button {
     filter: sepia(1);
     border-radius: .2rem;
     color: white;
+  }
+
+  .name {
+    overflow: hidden;
   }
 }

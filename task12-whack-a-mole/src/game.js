@@ -67,7 +67,7 @@ function Game() {
 
     this.levelUp = () => {
       if(score > 5 && minPeepTime >= 500) {
-        minPeepTime -= 50;
+        minPeepTime -= 500;
         level++;
         levelText.textContent = level;   
       }
