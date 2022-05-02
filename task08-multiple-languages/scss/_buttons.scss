@@ -1,0 +1,40 @@
+/* BUTTON STYLING */
+button {
+  &:hover { cursor: pointer; }
+}
+.text-btn {
+  height: fit-content;
+  border: none;
+  background-color: $background-color;
+  color: $primary-dark-1;
+}
+.read-more-btn {
+  display: flex;
+  column-gap: $small-padding;
+}
+.language-btn {
+  width: 169px;
+  height: 30.79px;
+
+  border: none;
+  background-color: $background-color;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: $tiny-padding;
+
+  color: $grey-0;
+/*
+  &:active {
+    background-color: $grey-4;
+  }
+*/
+  @include responsive (desktop) {
+    width: 90px;
+
+    h2 {
+      display: none;
+    }
+  }
+}
