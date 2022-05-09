@@ -85,7 +85,7 @@ function Game() {
     }
 
     this.sound = e => {
-      if(!e.target.classList.contains('mole') && !timeUp) audioFail.play();
+      !e.target.classList.contains('mole') && !timeUp && audioFail.play()
     }
 
     this.changeScore = () => {
