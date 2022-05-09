@@ -55,8 +55,7 @@ function Game() {
         scoreBoard.textContent = 0;
         timeUp = false;
         score = 0;
-        if(document.getElementById("name").value === "") name = "Anonymous"
-        else name = document.getElementById("name").value;
+        name = document.getElementById("name").value || "Anonymous"
         this.peep();
         setTimeout(() => {
           timeUp = true;
