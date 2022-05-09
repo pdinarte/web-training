@@ -8,7 +8,9 @@ function Game() {
     const scoreBoard = document.querySelector('.score');
     const levelText = document.querySelector('.level');
     const moles = document.querySelectorAll('.mole');
-    const bestScoresPanel = document.querySelector('bestScores');
+    const gameDuration = 10000;
+    const nextLevelPoints = 5;
+    const scoresInBoard = 5;
     let minPeepTime = 1000;
     let maxPeepTime = 1000;
     let lastHole;
@@ -61,11 +63,11 @@ function Game() {
           timeUp = true;
           this.changeScore();
           this.levelUp();
-        }, 10000)
+        }, gameDuration)
     }
 
     this.levelUp = () => {
-      if(score > 5 && minPeepTime >= 500) {
+      if(score > nextLevelPoints && minPeepTime >= 500) {
         minPeepTime -= 500;
         level++;
         levelText.textContent = level;   
@@ -89,8 +91,8 @@ function Game() {
     this.changeScore = () => {
       scoreBoard.textContent = score;
       let newScore = false;
-      var i;
-      for(i = 0; i < 5; i++) {
+      let i;
+      for(i = 0; i < scoresInBoard; i++) {
         if(score >= bestScores[i].score) {
           bestScores.splice(i,0,{"name" : name, "score" : score})
           bestScores.pop();
@@ -99,7 +101,7 @@ function Game() {
         }
       }
       if(newScore) {
-        while(i < 5){
+        while(i < scoresInBoard){
           document.querySelector('.name'+i).textContent = bestScores[i].name;
           document.querySelector('.points'+i).textContent = bestScores[i].score;
           i++;
