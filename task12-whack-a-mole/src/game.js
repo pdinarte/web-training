@@ -2,17 +2,33 @@ const game = new Game();
 game.initialize();
 
 function Game() {
+    const audioFail = document.getElementById("audioFail");
+    const audioSuccess = document.getElementById("audioSuccess");
     const holes = document.querySelectorAll('.hole');
     const scoreBoard = document.querySelector('.score');
+    const levelText = document.querySelector('.level');
     const moles = document.querySelectorAll('.mole');
-    const minPeepTime = 200;
-    const maxPeepTime = 1000;
+    const gameDuration = 10000;
+    const nextLevelPoints = 5;
+    const scoresInBoard = 5;
+    let minPeepTime = 1000;
+    let maxPeepTime = 1000;
     let lastHole;
-    let timeUp = false;
+    let timeUp = true;
     let score = 0;
+    let level = 1;
+    let name;
+    let bestScores = [
+      {"name" : "Anonymous", "score" : 0},
+      {"name" : "Anonymous", "score" : 0},
+      {"name" : "Anonymous", "score" : 0},
+      {"name" : "Anonymous", "score" : 0},
+      {"name" : "Anonymous", "score" : 0},
+    ];
 
     this.initialize = () => {
         moles.forEach(mole => mole.addEventListener('click', this.bonk));
+        holes.forEach(hole => hole.addEventListener('click', this.sound));
     }
 
     this.randomTime = (min, max) => {
@@ -41,16 +57,59 @@ function Game() {
         scoreBoard.textContent = 0;
         timeUp = false;
         score = 0;
+        name = document.getElementById("name").value || "Anonymous"
         this.peep();
-        setTimeout(() => timeUp = true, 10000)
+        setTimeout(() => {
+          timeUp = true;
+          this.changeScore();
+          this.levelUp();
+        }, gameDuration)
+    }
+
+    this.levelUp = () => {
+      if(score > nextLevelPoints && minPeepTime >= 500) {
+        minPeepTime -= 500;
+        level++;
+        levelText.textContent = level;   
+      }
     }
 
     this.bonk = e => {
         if (!e.isTrusted) return;
-        score++;
+        if(!timeUp) {
+          audioSuccess.play();
+          score++;
+          scoreBoard.textContent = score;
+        };
         e.target.classList.remove('up');
-        scoreBoard.textContent = score;
+    }
+
+    this.sound = e => {
+      !e.target.classList.contains('mole') && !timeUp && audioFail.play()
+    }
+
+    this.changeScore = () => {
+      scoreBoard.textContent = score;
+      let newScore = false;
+      let i;
+      for(i = 0; i < scoresInBoard; i++) {
+        if(score >= bestScores[i].score) {
+          bestScores.splice(i,0,{"name" : name, "score" : score})
+          bestScores.pop();
+          newScore = true;
+          break;
+        }
+      }
+      if(newScore) {
+        while(i < scoresInBoard){
+          document.querySelector('.name'+i).textContent = bestScores[i].name;
+          document.querySelector('.points'+i).textContent = bestScores[i].score;
+          i++;
+        }
+      }
     }
 }
+
+
 
 
